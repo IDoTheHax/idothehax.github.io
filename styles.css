@@ -149,3 +149,16 @@ main {
     padding: 20px;
     text-align: center;
 }
+
+.mr-2 {
+    margin-right: .5rem;
+}
+
+.text-white {
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.font-bold {
+    font-weight: 700;
+}
