@@ -15,13 +15,44 @@ body.dark-mode {
 }
 
 .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     color: #f5f5f5;
     height: 60px;
+    transition: background-color 0.3s;
+}
+
+.hax-section {
+    height: 100vh;
+    background-image: url('https://cdn.discordapp.com/avatars/987323487343493191/97c3f70795aea49c57c0f924b44e2b5c?size=1024');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.3s;
+}
+
+.hax-section h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 3em;
+    text-align: center;
+}
+
+.content {
+    background-color: #121212;
+    color: #f5f5f5;
+    padding-top: 20px;
 }
 
 .logo {
@@ -30,7 +61,7 @@ body.dark-mode {
 }
 
 .menu a {
-    color: #f5f5f5;
+    color: #fffdfd;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1em;
@@ -91,12 +122,19 @@ input:checked + .slider:before {
     transform: translateX(14px);
 }
 
-body {
+/*body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #f5f5f5;
     transition: background-color 0.3s, color 0.3s;
+}*/
+
+
+.content {
+    background-color: #121212;
+    color: #f5f5f5;
+    padding-top: 20px;
 }
 
 header {
