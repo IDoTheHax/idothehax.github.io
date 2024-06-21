@@ -200,3 +200,64 @@ main {
 .font-bold {
     font-weight: 700;
 }
+
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+hr {
+    border-top-width: 1px;
+}
+
+.mr-2 {
+    margin-right: .5rem;
+}
+
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact > * + * {
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        flex-direction: row;
+    }
+
+    .contact > * + * {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+}
+
+.typing {
+        border-right: .15em solid #000;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        color: #29c629;
+    }
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+        from { height: 100%; }
+        to { height: 100%;}
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }

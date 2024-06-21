@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDoTheHax</title>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="IDoTheHax">
+    <meta name="description" content="Hello there world, I'm IDoTheHax, This is my Portfolio ig?">
+    <meta name="keywords" content="idothehax, hax, solar, solar smp, ai, minecraft, development">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="idothehax.com">
+    <meta name="theme-color" content="#FFFFFF">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comic Neue', cursive;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://i.imgur.com/iK0e7NI.png" type="image/x-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+    /**  RESPONSIVE */
+    @media screen and (max-width: 465px) {
+        .ad_preview {
+            top: 0px !important;
+            right: 0px !important;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        .ad_preview {
+            top: 0px !important;
+            right: 0px !important;
+            left: 0px !important;
+            max-width: 100% !important;
+            bottom: unset !important;
+        }
+    }
+
+    @media screen and (max-width: 488px) {
+        .icon-container {
+            bottom: 7px !important;
+        }
+    }
+
+    @media screen and (max-width: 457px) {
+        .ad_preview .block .more_block {
+            margin-top: 13px !important;
+        }
+    }
+
+    @media screen and (max-width: 438px) {
+        .ad_preview .block .banner_block {
+            margin-top: 10px !important;
+        }
+    }</style>
+    </head>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
 </head>
 <body>
     <div class="topbar">
@@ -22,11 +84,27 @@
                 <input type="checkbox" id="darkModeToggle">
                 <span class="slider round"></span>
             </label>
-            $('div.dark-mode-toggle').click();
         </div>
     </div>
     <div class="hax-section">
-        <h1>This is my Portfolio/about me page</h1>
+        
+        <div class="text-center mt-8">
+            <h1><span id="typing-text" class="typing"></span></h1>
+        <div class="flex flex-col justify-center items-center space-y-4 mt-8">
+            <a href="https://discord.com/users/987323487343493191" target="_blank" class="bg-blue-800 hover:bg-blue-900 text-white text-xs font-bold py-2 px-4 rounded-full flex items-center focus:outline-none focus:shadow-outline">
+                <span class="mr-2">
+                    <i class="fab fa-discord"></i>
+                </span>
+                Contact me via Discord
+            </a>
+            <a href="mailto:hax@idothehax.com" target="_blank" class="bg-red-800 hover:bg-red-900 text-white text-xs font-bold py-2 px-4 rounded-full flex items-center focus:outline-none focus:shadow-outline">
+                <span class="mr-2">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                Contact me via Email
+            </a>
+        </div>
+    </div>
     </div>
     <section id="introduction">
         <h2>Hello there world 👋🏾, I'm IDoTheHax, and this is my Portfolio:</h2>
@@ -77,24 +155,42 @@
         </ul>
         <p>I'm always looking to improve, feel free to message me on Discord <strong>@IDoTheHax</strong> for tips. You can also ask me to help on your project, depends on how I feel and if I'm paid. 😏</p>
     </section>
-    <section id="contact">
-        <div class="flex flex-col md:flex-row justify-center text-center space-y-4 md:space-y-0 md:space-x-4 mt-8">
-            <div class="contact-buttons">
-                <a href="https://discord.com/users/987323487343493191" target="_blank" class="bg-blue-800 hover:bg-blue-900 text-white text-xs font-bold py-2 px-4 rounded-full flex items-center focus:outline-none focus:shadow-outline">
-                    <span class="mr-2">
-                        <i class="fab fa-discord"></i>
-                    </span>
-                    Contact me via Discord
-                </a>
-                <a href="mailto:business@idothehax.com" target="_blank" class="bg-red-800 hover:bg-red-900 text-white text-xs font-bold py-2 px-4 rounded-full flex items-center focus:outline-none focus:shadow-outline">
-                    <span class="mr-2">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                    Contact me via Email
-                </a>
-            </div>
-        </div>
-        </section>
-    <script src="script.js"></script>
+    <section>
+    <hr class="my-8">
+    
+    <hr class="my-8">
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const texts = ["This is my Portfolio/about me page", "have a look around"];
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+        const typingTextElement = document.getElementById('typing-text');
+
+        function typeText() {
+            if (currentCharIndex < texts[currentTextIndex].length) {
+                typingTextElement.innerHTML += texts[currentTextIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(typeText, 70); // Adjust typing speed by changing the timeout value
+            } else {
+                setTimeout(deleteText, 1000); // Wait before starting to delete
+            }
+        }
+
+        function deleteText() {
+            if (currentCharIndex > 0) {
+                typingTextElement.innerHTML = typingTextElement.innerHTML.slice(0, -1);
+                currentCharIndex--;
+                setTimeout(deleteText, 50); // Adjust deleting speed by changing the timeout value
+            } else {
+                currentTextIndex = (currentTextIndex + 1) % texts.length;
+                setTimeout(typeText, 500); // Wait before starting to type the next text
+            }
+        }
+
+        typeText();
+        });
+    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
