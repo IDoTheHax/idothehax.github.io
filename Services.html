@@ -18,8 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/987323487343493191/97c3f70795aea49c57c0f924b44e2b5c" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -28,35 +31,49 @@
     <nav class="topbar">
         <div class="logo"><a href="/">IDoTheHax</a></div>
         <div class="nav-links">
-            <a href="/About">About</a> 
-            <a href="/Services">Services</a>
+            <a href="/About.html">About</a> 
+            <a href="/Services.html">Services</a>
             <a href="#">Contact</a> 
         </div>
     </nav>
     
     <main class="main-section">
-        
-        <h2>🌟 SMP Development Inc.</h2>
-        <p>Your go-to provider for premium quality Minecraft SMP plugins and server management services! 🚀</p>
-        
-        <p><strong>What I offer:</strong></p>
-        
-        <ul>
-          <li><strong>SMP Discord Server Creation</strong> (Public &amp; Private) 🌐 — 4 EUR/hr</li>
-          <li><strong>Minecraft Server Setup &amp; Management</strong> ⛑️ — 8 EUR/hr</li>
-          <li><strong>Premade Minecraft SMP Plugins</strong> (e.g., Lifesteal, Infuse, etc.) ⚙️ — 4–20 EUR</li>
-          <li><strong>Custom Minecraft SMP Plugins</strong> (Tailored to your needs) 🖥️ — 18 EUR/hr</li>
-        </ul>
-        
+        <h2>🌟 IDoTheHax Development Inc.</h2>
+        <p>Your go-to provider for premium quality Minecraft SMP plugins, server management services and Discord Bots! 🚀</p>
+    
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <strong>SMP Discord Server Creation</strong>
+                    <span>(Public & Private) 🌐 — 4 EUR/hr</span>
+                </div>
+                <div class="swiper-slide">
+                    <strong>Minecraft Server Setup & Management</strong>
+                    <span>⛑️ — 8 EUR/hr</span>
+                </div>
+                <div class="swiper-slide">
+                    <strong>Premade Minecraft SMP Plugins</strong>
+                    <span>(e.g., Lifesteal, Infuse, etc.) ⚙️ — 4–20 EUR</span>
+                </div>
+                <div class="swiper-slide">
+                    <strong>Custom Minecraft SMP Plugins</strong>
+                    <span>(Tailored to your needs) 🖥️ — 18 EUR/hr</span>
+                </div>
+                <div class="swiper-slide">
+                    <strong>Custom Minecraft SMP Plugins</strong>
+                    <span>(Tailored to your needs) 🖥️ — 18 EUR/hr</span>
+                </div>
+            </div>
+        </div>
+    
         <p><em>💡 Note: Prices are negotiable and flexible to suit your needs.</em><br>
         <em>🚨 Upfront Fee: A one-time starting fee of 5 EUR.</em><br>
         <em>💬 Only serious inquiries, please—DM me or join the discord for more details!</em></p>
-        
+    
         <p>🔗 <a href="Join the discord!">https://discord.gg/RCua88B9dC</a></p>
-          
+    
         <div class="flex flex-row justify-center items-center space-x-4 mt-8">
             <a href="https://discord.com/invite/asvf6Mvfsq" target="_blank" class="bg-blue-800 text-white text-xs font-bold py-2 px-4 rounded-full flex items-center focus:outline-none focus:shadow-outline">
-                <!-- Userid: https://discord.com/users/987323487343493191 -->
                 <span class="mr-2">
                     <i class="fab fa-discord"></i>
                 </span>
@@ -69,7 +86,6 @@
                 Contact me via Email
             </a>
         </div>
-    </div>
     </main>
     
     <section id="introduction">
@@ -105,6 +121,25 @@
 
         </div>
     </footer>
-    <script src="js/typing.js"></script>
-</body>
+    <script>
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        const firstSlide = swiperWrapper.querySelector('.swiper-slide:first-child').cloneNode(true);
+        const lastSlide = swiperWrapper.querySelector('.swiper-slide:last-child').cloneNode(true);
+
+        swiperWrapper.appendChild(firstSlide);
+        swiperWrapper.insertBefore(lastSlide, swiperWrapper.firstChild);
+
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            loop: true, 
+            loopAdditionalSlides: 1,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            grabCursor: true,
+            centeredSlides: true,
+            initialSlide: 1,
+        });
+    </script></body>
 </html>
