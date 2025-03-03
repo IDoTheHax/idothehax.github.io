@@ -1,5 +1,5 @@
 .swiper-slide {
-    width: 30%; /* Adjust this value to fit 3 slides */
+    width: 30%;
     margin-right: 10px;
     padding: 15px;
     border-radius: 8px;
@@ -7,11 +7,11 @@
     font-size: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .swiper-container {
-    width: 100%;
+    width: 30%;
     padding: 20px 0;
-    overflow: hidden; /* Hide the horizontal overflow */
-    position: relative; /* Required for positioning the clones */
+    position: relative;
 }
 
 .swiper-slide strong {
