@@ -63,7 +63,10 @@
                     <strong>Custom Discord Bots</strong>
                     <span>(Also Tailored to your needs) 🤖 — 6 EUR/hr</span>
                 </div>
-                
+                <div class="swiper-slide">
+                    <strong>Custom Minecraft Mods</strong>
+                    <span>10 EUR/hr</span>
+                </div>
             </div>
         </div>
     
@@ -133,7 +136,7 @@
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
             loop: true,
-            loopAdditionalSlides: 1,e
+            loopAdditionalSlides: 1,
             autoplay: {
                 delay: 1500,
                 disableOnInteraction: false,
@@ -141,6 +144,15 @@
             grabCursor: true,
             centeredSlides: true,
             initialSlide: 1,
+            on: {
+                slideChange: function () {
+                    document.querySelectorAll('.swiper-slide').forEach(slide => {
+                        slide.classList.remove('swiper-slide-active');
+                    });
+
+                    this.slides[this.activeIndex].classList.add('swiper-slide-active');
+                }
+            }
         });
     </script></body>
 </html>
